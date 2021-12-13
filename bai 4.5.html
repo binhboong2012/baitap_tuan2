@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 4.5</title>
+</head>
+<body>
+Canh a = <input type="number" id="a"><br>
+Canh b = <input type="number" id="b"><br>
+Canh c = <input type="number" id="c"><br>
+<button  onclick="isEvenNumber()">Kiểm tra</button>
+<p style="color: blue;font-weight: bold;" id="result"></p>
+
+<script>
+    function isEvenNumber() {
+        let aInput = document.getElementById("a").value;
+        let bInput = document.getElementById("b").value;
+        let cInput = document.getElementById("c").value;
+        let result;
+        if (aInput == '' || bInput == '' || cInput == '') {
+            result = 'Bạn cần nhập đủ dữ liệu';
+            document.getElementById("result").innerHTML = result;
+            return false;
+        }
+        let a = parseInt(aInput);
+        let b = parseInt(bInput);
+        let c = parseInt(cInput);
+
+        if (a > b+c || b > a+c || c > a+b) {
+            result = 'đây không phải là 1 tam giác';
+        } else if (a === b && a === c ){
+            result = 'đây là tam giác đều';
+        } else if (a === b || a === c || b === c) {
+            result = 'đây là tam giác cân';
+        } else if (a^2 == (b^2 + c^2) || b^2 == (a^2 + c^2) || c^2 == (b^2 + a^2)) {
+            result = 'đây là tam giác vuông';
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>

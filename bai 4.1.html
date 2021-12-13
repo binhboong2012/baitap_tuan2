@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4.1</title>
+</head>
+<body>
+ Độ dài cạnh a = <input type="number" id="a"><br>
+<button onclick ="run()">Click!</button>
+<p id="result"></p>
+<script>
+    function run() {
+        let side= document.getElementById("side").value;
+        let area =side*side;
+        let perimeter =side*4;
+        document.getElementById("result").innerHTML='Diện tích hình vuông là:'+s+'' +
+            '. Chu vi hình vuông là: '+p;
+
+    }
+</script>
+</body>
+</html>
